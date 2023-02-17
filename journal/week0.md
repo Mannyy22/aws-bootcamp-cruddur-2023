@@ -22,6 +22,7 @@
 ![InstallCLI](https://user-images.githubusercontent.com/46639580/219565575-72ada5aa-08c0-4980-b93f-072e3b2f5492.png)
 
 <p>Ran the following commands below to install AWS CLI</p>
+
 ```bash
   - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
   - unzip awscliv2.zip

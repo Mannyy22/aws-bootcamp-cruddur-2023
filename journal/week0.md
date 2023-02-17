@@ -41,11 +41,9 @@
 
 ## Problems
 <ul>
-  <li>First item</li>
+  <liWas getting You don't have permissions to push to "Mannyy22/aws-bootcamp-cruddur-2023" on GitHub. Would you like to create a fork and push to it           instead? -To fix  I went to Gipod usersettings, intergrations, select Github(three dotted line), edit permissions and selected read:user, public_repo, repo   </li>
   <li>Second item</li>
-  <li>Third item</li>
-  <li>Fourth item</li>
-</ul> 
+ 
 <p>Was getting You don't have permissions to push to "Mannyy22/aws-bootcamp-cruddur-2023" on GitHub. Would you like to create a fork and push to it instead? - To fix  I went to Gipod usersettings, intergrations, select Github(three dotted line), edit permissions and selected read:user, public_repo, repo </p>
 
 

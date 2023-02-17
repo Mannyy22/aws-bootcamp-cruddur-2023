@@ -1,7 +1,7 @@
 # Week 0 — Billing and Architecture
 
 ## Todo list
-- [x ] Watch weekly videos
+- [x] Watch weekly videos
 - [x] Create Admin User
 
 Purpose of Cruddar:

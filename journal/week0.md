@@ -16,6 +16,8 @@
 ## Generate AWS Credentials
 ![AWS credentials picture](https://user-images.githubusercontent.com/46639580/219569432-2e6b1404-043c-4dc3-87f3-21d1f896c2fb.png)
 
+![gitpod-env](https://user-images.githubusercontent.com/46639580/219686195-09c9f057-0466-4491-a74d-a65e84e2c143.png)
+
 <p>If I type out env | grep AWS my credentials I saved to gitpods variables on my account will be displayed.</p>
 
 ## Installed AWS CLI

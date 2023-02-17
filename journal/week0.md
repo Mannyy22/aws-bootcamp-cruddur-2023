@@ -14,10 +14,14 @@
 <p>I created my admin user via the console, and gave permssion AdministratorAccess to user.</p>
 
 ## Generate AWS Credentials
+![2023_02_17_00_50_04_IAM_Management_Console_Mozilla_Firefox](https://user-images.githubusercontent.com/46639580
+![AWS credentials picture](https://user-images.githubusercontent.com/46639580/219565091-332f0866-abe9-4e0e-bf05-368787341c91.png)
 
 <p>If I type out env | grep AWS my credentials I saved to me environment will be displayed.</p>
 
 ## Installed AWS CLI
+
+
 
 ## Create Billing Alarm
 

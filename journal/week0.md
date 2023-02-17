@@ -41,8 +41,9 @@
 
 ## Problems
 <ul>
-  <liWas getting You don't have permissions to push to "Mannyy22/aws-bootcamp-cruddur-2023" on GitHub. Would you like to create a fork and push to it           instead? -To fix  I went to Gipod usersettings, intergrations, select Github(three dotted line), edit permissions and selected read:user, public_repo, repo   </li>
-  <li>Second item</li>
+  <li>
+   I Was getting You don't have permissions to push to "Mannyy22/aws-bootcamp-cruddur-2023" on GitHub. Would you like to create a fork and push to it             instead? -To fix  I went to Gipod usersettings, intergrations, select Github(three dotted line), edit permissions and selected read:user, public_repo,       repo </li>
+  <li>Addin  task to .gitpod.yml file was not launch when booting up gitpod from website, after launching gitpod from github the file sucessfully ran </li>
  
 <p>Was getting You don't have permissions to push to "Mannyy22/aws-bootcamp-cruddur-2023" on GitHub. Would you like to create a fork and push to it instead? - To fix  I went to Gipod usersettings, intergrations, select Github(three dotted line), edit permissions and selected read:user, public_repo, repo </p>
 

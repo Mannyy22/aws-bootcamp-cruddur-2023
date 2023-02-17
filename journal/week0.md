@@ -32,6 +32,8 @@
 ## Create Billing Alarm
 
 ## Create a Budget
+![BUDGETS](https://user-images.githubusercontent.com/46639580/219567208-917f7b37-a6f1-429b-93c7-a113d65f1f3e.png)
+
 Purpose of Cruddar:
 
 Cruddar is Twitter like platofrm that allows users to set a expirary time on post, this allows people to more freely speak their minds at a current momment.

@@ -30,9 +30,12 @@
 
  
 ## Create Billing Alarm
+![alarm](https://user-images.githubusercontent.com/46639580/219567928-37ee07d8-ae15-463e-8f94-7377e8e6096d.png)
+
 
 ## Create a Budget
 ![BUDGETS](https://user-images.githubusercontent.com/46639580/219567208-917f7b37-a6f1-429b-93c7-a113d65f1f3e.png)
+
 
 Purpose of Cruddar:
 

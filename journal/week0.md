@@ -63,4 +63,4 @@ Cruddar is Twitter like platofrm that allows users to set a expirary time on pos
 6) Messageing System will recieve user info from Database and process stuff to back to personailze user feed. 
 
 
-##Logical Design -
+## Logical Design -

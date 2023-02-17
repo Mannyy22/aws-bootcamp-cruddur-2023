@@ -39,7 +39,17 @@
 ![BUDGETS](https://user-images.githubusercontent.com/46639580/219567208-917f7b37-a6f1-429b-93c7-a113d65f1f3e.png)
 
 
-Purpose of Cruddar:
+## Problems
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+  <li>Fourth item</li>
+</ul> 
+<p>Was getting You don't have permissions to push to "Mannyy22/aws-bootcamp-cruddur-2023" on GitHub. Would you like to create a fork and push to it instead? - To fix  I went to Gipod usersettings, intergrations, select Github(three dotted line), edit permissions and selected read:user, public_repo, repo </p>
+
+
+## Purpose of Cruddar:
 
 Cruddar is Twitter like platofrm that allows users to set a expirary time on post, this allows people to more freely speak their minds at a current momment.
 

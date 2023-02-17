@@ -69,3 +69,6 @@ Cruddar is Twitter like platofrm that allows users to set a expirary time on pos
 
 
 ## Logical Design -
+
+![Cruddar Logical Diagram](https://user-images.githubusercontent.com/46639580/219693878-8d911af8-36de-4605-873d-496fe904c257.png)
+

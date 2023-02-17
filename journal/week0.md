@@ -15,6 +15,8 @@
 
 ## Generate AWS Credentials
 
+<p>If I type out env | grep AWS my credentials I saved to me environment will be displayed.</p>
+
 ## Installed AWS CLI
 
 ## Create Billing Alarm

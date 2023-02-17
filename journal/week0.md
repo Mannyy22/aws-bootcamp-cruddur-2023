@@ -32,6 +32,9 @@
 ```
 <p>Ref:https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html </p>
 
+![verifyCLI](https://user-images.githubusercontent.com/46639580/219688520-90785f9d-c65e-4980-a208-714e4a28eaa3.png)
+ 
+ Verifyed my AWS CLI was working by running ```aws sts get-caller-identity```
  
 ## Create Billing Alarm
 ![alarm](https://user-images.githubusercontent.com/46639580/219567928-37ee07d8-ae15-463e-8f94-7377e8e6096d.png)

@@ -9,6 +9,7 @@
 - [x] Create a Budget
 
 ## Create Admin User
+![2023_02_17_00_50_04_IAM_Management_Console_Mozilla_Firefox](https://user-images.githubusercontent.com/46639580/219560841-a71421c2-9060-4c39-89cd-43cbc1ddbbca.png)
 
 ## Generate AWS Credentials
 

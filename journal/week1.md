@@ -1,1 +1,25 @@
 # Week 1 — App Containerization
+
+
+## Todo list
+- [x] Watch weekly videos
+- [x] Containerize Application (Dockerfiles, Docker Compose)
+- [x] Write a Flask Backend Endpoint for Notifications
+- [x] Write a React Page for Notifications
+- [x] Run DynamoDB Local Container and ensure it works
+- [x] Run Postgres Container and ensure it works
+
+## Containerize Application (Dockerfiles, Docker Compose)
+
+## Write a Flask Backend Endpoint for Notifications
+
+
+## Write a React Page for Notifications
+
+ 
+## Run DynamoDB Local Container and ensure it works
+
+
+
+## Run Postgres Container and ensure it works
+

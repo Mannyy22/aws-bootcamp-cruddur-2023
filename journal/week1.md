@@ -148,6 +148,10 @@ volumes:
  ```
 
 ## Write a Flask Backend Endpoint for Notifications
+![fro
+![nonbackend](https://user-images.githubusercontent.com/46639580/221342810-a872b4ab-5b74-4bb7-af0c-a21ae140143e.png)
+tend](https://user-images.githubusercontent.com/46639580/221342529-f5af3f29-4eff-4a72-99da-ba3ca8519111.png)
+
 
 
 

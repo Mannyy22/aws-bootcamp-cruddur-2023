@@ -10,7 +10,8 @@
 - [x] Run Postgres Container and ensure it works
 
 ## Containerize Application (Dockerfiles, Docker Compose)
-<p>This week we learned about Docker and how to create Docker file and Build a Docer container.</p>
+* This week we learned about Docker and how to create Docker file and Build a Docer container.
+<p>
 
 ## Write a Flask Backend Endpoint for Notifications
 

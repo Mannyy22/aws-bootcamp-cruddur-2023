@@ -31,7 +31,7 @@ ENV FLASK_ENV=development
 EXPOSE ${PORT}
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
 ```
-<p>The following will setup flask and allow us to access our backend on port 4567, we also have to set environmental variables `export FRONTEND_URL = "*"` and `export BACKEND_URL = "*"` so we can access our frontend and backend. You can check if environmental variables are set by running `env | grep BACKEND` or  `env | grep FRONTEND` </p>
+The following will setup flask and allow us to access our backend on port 4567, we also have to set environmental variables `export FRONTEND_URL = "*"` and `export BACKEND_URL = "*"` so we can access our frontend and backend. You can check if environmental variables are set by running `env | grep BACKEND` or  `env | grep FRONTEND`.
 
 ```sh
 cd backend-flask
@@ -58,7 +58,7 @@ docker run --rm -p 4567:4567 -it  -e FRONTEND_URL -e BACKEND_URL backend-flask
 unset FRONTEND_URL="*"
 unset BACKEND_URL="*"
 ```
-<p>We want to use `FRONTEND_URL="*" BACKEND_URL="*" docker run --rm -p 4567:4567 -it backend-flask` this will set the env varibles when the contain is running and allow us to access our frontend and backend</p>
+ We want to use `docker run --rm -p 4567:4567 -it -e FRONTEND_URL='*' -e BACKEND_URL='*' backend-flask` this will set the env variables  when the contain is running and allow us to access our frontend and backend 
 
 ## Write a Flask Backend Endpoint for Notifications
 

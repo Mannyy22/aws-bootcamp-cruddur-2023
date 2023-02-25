@@ -14,7 +14,7 @@
 * Docker lets us containerizes our application so the application can be used across differnt hardware devices.
 
 ### Creaing Dockerfile
- <p>We created a Dockerfile in `backend-flask/Dockerfile` using the commands below. This is a list of commands that when we run this file will assemble our image.</p>
+ <p>We created a Dockerfile in `backend-flask/Dockerfile` using the commands below. When we execute the Dockerfile, this file will build our image.</p>
  
  ```dockerfile
 FROM python:3.10-slim-buster

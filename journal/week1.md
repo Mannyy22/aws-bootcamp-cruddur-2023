@@ -31,7 +31,7 @@ ENV FLASK_ENV=development
 EXPOSE ${PORT}
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
 ```
-<p>The following will run Python and setup Flashh we also have to setup environment variables so we can reach out frontend and backend </p>
+<p>The following will setup flask and allow us to access our backend on port 4567, we also have to set environment variables so we can reach our frontend and backend </p>
 
 ```sh
 cd backend-flask

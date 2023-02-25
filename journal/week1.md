@@ -148,14 +148,18 @@ volumes:
  ```
 
 ## Write a Flask Backend Endpoint for Notifications
-![fro
-![nonbackend](https://user-images.githubusercontent.com/46639580/221342810-a872b4ab-5b74-4bb7-af0c-a21ae140143e.png)
-tend](https://user-images.githubusercontent.com/46639580/221342529-f5af3f29-4eff-4a72-99da-ba3ca8519111.png)
+![nonbackend](https://user-images.githubusercontent.com/46639580/221342882-a4fd38f2-46c5-4742-bbdf-c51aca74dc0b.png)
 
-
-
+We were able to achieve this by: 
+1) Creating an OpenAPI path for notifications called `api/activties/notifications:` (we setup the API similiar to the API for our home path)
+2) Went into `app.py`and created service object for 'notifcations', next we added a app route for our notifcation API.
+3) Created a `notifications_activities.py` and copy and pasted code from `home_activities` into new file.
 
 ## Write a React Page for Notifications
+![frontendnon](https://user-images.githubusercontent.com/46639580/221343288-2d36197e-e028-40cc-8a23-b58f44dbaaae.png)
+We were able to achieve this by: 
+1) Created a new page in our `App.js` file called `NotificationsFeed` and created a Path for it
+2) Created a new file called file called `NotificationsFeedPage.js` and file called `NotificationsFeedPage.css`, then copied and pasted content in `HomeFeedPage` to `NotificationsFeedPage.js`
 
  
 ## Run DynamoDB Local Container and ensure it works

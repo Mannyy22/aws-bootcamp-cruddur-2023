@@ -14,7 +14,7 @@
 * Docker lets us containerizes our application so the application can be used across differnt hardware devices.
 
 ### Creaing Dockerfile
- <p>We created a Dockerfile in `backend-flask/Dockerfile` using the commands below. When we execute the Dockerfile, this file will build our image.</p>
+ <p>We created a Dockerfile in `backend-flask/Dockerfile` using the commands below, these commands are instructions on how to build our Docker Image. When we execute the Dockerfile, this file will build our image.</p>
  
  ```dockerfile
 FROM python:3.10-slim-buster
@@ -31,7 +31,16 @@ ENV FLASK_ENV=development
 EXPOSE ${PORT}
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
 ```
+<p>The following will run Python and setup Flashh we also have to setup environment variables so we can reach out frontend and backend </p>
 
+```sh
+cd backend-flask
+export FRONTEND_URL="*"
+export BACKEND_URL="*"
+python3 -m flask run --host=0.0.0.0 --port=4567
+cd ..
+```
+### Creaing Dockerfile
 
 
 

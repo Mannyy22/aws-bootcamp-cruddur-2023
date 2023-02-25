@@ -62,8 +62,93 @@ unset BACKEND_URL="*"
  
  Another way to run our dockerfile we can right click on the `docker-compose.yml` file then click Compose up
  ![backend](https://user-images.githubusercontent.com/46639580/221342233-76efb02b-465c-4abd-a783-75772532f27d.png)
+ 
+ ### Frontend Container 
+ 
+ Similiarly we do the same above for your Frontend
+ 
+ We create a Docker File
+
+```dockerfile
+FROM node:16.18
+
+ENV PORT=3000
+
+COPY . /frontend-react-js
+WORKDIR /frontend-react-js
+RUN npm install
+EXPOSE ${PORT}
+CMD ["npm", "start"]
+```
+
+Build the Container
+```sh
+docker build -t frontend-react-js ./frontend-react-js
+```
+Run the Container 
+```sh
+docker run -p 3000:3000 -d frontend-react-js
+```
+![frontend](https://user-images.githubusercontent.com/46639580/221342529-f5af3f29-4eff-4a72-99da-ba3ca8519111.png)
+
+Ultimately we can configure a `docker-compose.yml` that will allow us to run the backend and frontend container at the same time.
+
+```
+version: "3.8"
+services:
+  backend-flask:
+    environment:
+      FRONTEND_URL: "https://3000-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
+      BACKEND_URL: "https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
+    build: ./backend-flask
+    ports:
+      - "4567:4567"
+    volumes:
+      - ./backend-flask:/backend-flask
+  frontend-react-js:
+    environment:
+      REACT_APP_BACKEND_URL: "https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
+    build: ./frontend-react-js
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend-react-js:/frontend-react-js
+  dynamodb-local:
+    # https://stackoverflow.com/questions/67533058/persist-local-dynamodb-data-in-volumes-lack-permission-unable-to-open-databa
+    # We needed to add user:root to get this working.
+    user: root
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./docker/dynamodb:/home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal
+  db:
+    image: postgres:13-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+# the name flag is a hack to change the default prepend folder
+# name when outputting the image names
+networks: 
+  internal-network:
+    driver: bridge
+    name: cruddur
+
+volumes:
+  db:
+    driver: local
+ ```
 
 ## Write a Flask Backend Endpoint for Notifications
+
 
 
 ## Write a React Page for Notifications

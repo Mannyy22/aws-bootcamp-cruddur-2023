@@ -47,7 +47,18 @@ cd ..
 docker build -t  backend-flask ./backend-flask
 ```
 
-
+### Run Container 
+```sh
+docker run --rm -p 4567:4567 -it backend-flask
+FRONTEND_URL="*" BACKEND_URL="*" docker run --rm -p 4567:4567 -it backend-flask
+export FRONTEND_URL="*"
+export BACKEND_URL="*"
+docker run --rm -p 4567:4567 -it -e FRONTEND_URL='*' -e BACKEND_URL='*' backend-flask
+docker run --rm -p 4567:4567 -it  -e FRONTEND_URL -e BACKEND_URL backend-flask
+unset FRONTEND_URL="*"
+unset BACKEND_URL="*"
+```
+<p>We want to use `FRONTEND_URL="*" BACKEND_URL="*" docker run --rm -p 4567:4567 -it backend-flask` this will set the env varibles when the contain is running and allow us to access our frontend and backend</p>
 
 ## Write a Flask Backend Endpoint for Notifications
 

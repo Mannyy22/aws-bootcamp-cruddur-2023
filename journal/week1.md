@@ -40,7 +40,12 @@ export BACKEND_URL="*"
 python3 -m flask run --host=0.0.0.0 --port=4567
 cd ..
 ```
-### Creaing Dockerfile
+### Building a Container
+<p>We can build container using the following command below</p>
+
+ ```sh
+docker build -t  backend-flask ./backend-flask
+```
 
 
 

@@ -172,3 +172,4 @@ Set up DynamoDB on Local Container using the commands in this repo: https://gith
 ## Run Postgres Container and ensure it works
 Got Postgres running we had to add `- cweijan.vscode-postgresql-client2` to `.gitpod.yml`
 ![image](https://user-images.githubusercontent.com/46639580/221343866-e2596bed-612b-4823-bf06-932c5844639d.png)
+![image](https://user-images.githubusercontent.com/46639580/221344270-22f69fb7-c08f-4679-a54a-591355ff7467.png)

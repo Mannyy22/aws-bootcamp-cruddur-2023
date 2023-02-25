@@ -163,8 +163,12 @@ We were able to achieve this by:
 
  
 ## Run DynamoDB Local Container and ensure it works
+Set up DynamoDB on Local Container using the commands in this repo: https://github.com/100DaysOfCloud/challenge-dynamodb-local
 
+![image](https://user-images.githubusercontent.com/46639580/221343672-7ab2aff3-b684-4f97-afc7-84f3e86921e4.png)
+![image](https://user-images.githubusercontent.com/46639580/221343651-c7baade5-0f56-4658-b330-c97df6850dc7.png)
 
 
 ## Run Postgres Container and ensure it works
-
+Got Postgres running we had to add `- cweijan.vscode-postgresql-client2` to `.gitpod.yml`
+![image](https://user-images.githubusercontent.com/46639580/221343866-e2596bed-612b-4823-bf06-932c5844639d.png)

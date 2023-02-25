@@ -32,7 +32,7 @@ EXPOSE ${PORT}
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
 ```
 <p>The following will setup flask and allow us to access our backend on port 4567, we also have to set environmental variables `export FRONTEND_URL = "*"`    
-`export BACKEND_URL = "*"`, this allows us to access the frontend and backend. We can confirm if these have been set by running `env | grep BACKEND` or `env | grep FRONTEND` </p>
+`export BACKEND_URL = "*"`</p>
 
 ```sh
 cd backend-flask

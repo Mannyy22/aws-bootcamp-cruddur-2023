@@ -61,6 +61,7 @@ unset BACKEND_URL="*"
  We want to use `docker run --rm -p 4567:4567 -it -e FRONTEND_URL='*' -e BACKEND_URL='*' backend-flask` this will set the env variables  when the contain is running and allow us to access our frontend and backend 
  
  Another way to run our dockerfile we can right click on the `docker-compose.yml` file then click Compose up
+ ![backend](https://user-images.githubusercontent.com/46639580/221342233-76efb02b-465c-4abd-a783-75772532f27d.png)
 
 ## Write a Flask Backend Endpoint for Notifications
 

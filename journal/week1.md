@@ -11,7 +11,13 @@
 
 ## Containerize Application (Dockerfiles, Docker Compose)
 * This week we learned about Docker and how to create Docker file and Build a Docer container.
-<p>
+* Docker lets us containerizes our application so the application can be used across differnt hardware devices.
+<ol>
+  <li>First we create a Docker file</li>
+  <li>Second item</li>
+  <li>Third item</li>
+  <li>Fourth item</li>
+</ol> 
 
 ## Write a Flask Backend Endpoint for Notifications
 

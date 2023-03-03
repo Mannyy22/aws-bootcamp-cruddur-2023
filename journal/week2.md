@@ -72,4 +72,57 @@ After the above steps Data was finally able to get to Honeycomb and we were able
 
 ## Configure custom logger to send to CloudWatch Logs
 
+First I added `watchtower` to `requirements.txt`
+
+
+Then ran:
+
+```sh
+pip install -r requirements.txt
+```
+
+Then Set the env var in your backend-flask for `docker-compose.yml`
+
+```yml
+      AWS_DEFAULT_REGION: "${AWS_DEFAULT_REGION}"
+      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
+      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
+```
+
+After I added the following below to my `app.py`
+
+```
+import watchtower
+import logging
+from time import strftime
+```
+
+```py
+# Configuring Logger to Use CloudWatch
+LOGGER = logging.getLogger(__name__)
+LOGGER.setLevel(logging.DEBUG)
+console_handler = logging.StreamHandler()
+cw_handler = watchtower.CloudWatchLogHandler(log_group='cruddur')
+LOGGER.addHandler(console_handler)
+LOGGER.addHandler(cw_handler)
+LOGGER.info("some message")
+```
+
+```py
+@app.after_request
+def after_request(response):
+    timestamp = strftime('[%Y-%b-%d %H:%M]')
+    LOGGER.error('%s %s %s %s %s %s', timestamp, request.remote_addr, request.method, request.scheme, request.full_path, response.status)
+    return response
+```
+We used the following to send Logs to Cloud Watch
+```py
+LOGGER.info('test log')
+```
+
+After we saw Crudder Log group and it the logs had our message "test log"
+![image](https://user-images.githubusercontent.com/46639580/222639558-b15640ba-1214-4417-9d6c-a4323f95f84f.png)
+
+![image](https://user-images.githubusercontent.com/46639580/222639558-b15640ba-1214-4417-9d6c-a4323f95f84f.png)
+
 ## Integrate Rollbar and capture and error

@@ -69,7 +69,8 @@ After the above steps Data was finally able to get to Honeycomb and we were able
 ![image](https://user-images.githubusercontent.com/46639580/222627474-ad0dd1e7-0f0e-406d-b86c-34f51b733133.png)
 
 ## Instrument AWS X-Ray
-
+Created xray 
+![image](https://user-images.githubusercontent.com/46639580/222649282-072cae17-c5ba-47ee-bcb9-902baecace68.png)
 ## Configure custom logger to send to CloudWatch Logs
 
 First I added `watchtower` to `requirements.txt`

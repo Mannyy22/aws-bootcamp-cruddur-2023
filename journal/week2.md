@@ -10,6 +10,34 @@
 ## Instrument Honeycomb with OTEL
 Setup OTEL_SERVICE_NAME in my docker-compose file:
 
+My Honeycomb account
+![image](https://user-images.githubusercontent.com/46639580/222625715-44b3442a-cea9-417a-afc6-b2283e2fc853.png)
+When first setting up a Honeycomb, we had to add the following below to our `requirements.txt`
+
+```
+opentelemetry-api 
+opentelemetry-sdk 
+opentelemetry-exporter-otlp-proto-http 
+opentelemetry-instrumentation-flask 
+opentelemetry-instrumentation-requests
+```
+Then we installed it using these dependencies:
+
+```sh
+pip install -r requirements.txt
+```
+
+Then added Add to the `app.py`
+
+```py
+from opentelemetry import trace
+from opentelemetry.instrumentation.flask import FlaskInstrumentor
+from opentelemetry.instrumentation.requests import RequestsInstrumentor
+from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import BatchSpanProcessor
+```
+
 ![image](https://user-images.githubusercontent.com/46639580/222335529-a7936216-b90f-43a9-a576-858e2d216803.png)
 
 ## Instrument AWS X-Ray

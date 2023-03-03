@@ -43,6 +43,7 @@ from opentelemetry.sdk.trace.export import BatchSpanProcessor
 ```sh
 export HONEYCOMB_API_KEY=""
 gp env HONEYCOMB_API_KEY=""
+
 ![honey ENV](https://user-images.githubusercontent.com/46639580/222626817-30b8d8c1-c8e1-49ee-b718-1e0482d91da7.png)
 
 ![image](https://user-images.githubusercontent.com/46639580/222335529-a7936216-b90f-43a9-a576-858e2d216803.png)

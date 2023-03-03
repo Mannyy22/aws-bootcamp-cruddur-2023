@@ -9,6 +9,7 @@
 
 ## Instrument Honeycomb with OTEL
 Setup OTEL_SERVICE_NAME in my docker-compose file:
+![image](https://user-images.githubusercontent.com/46639580/222627605-5147bcbc-c4b4-409c-b91c-51c1535668a4.png)
 
 My Honeycomb account
 ![image](https://user-images.githubusercontent.com/46639580/222625715-44b3442a-cea9-417a-afc6-b2283e2fc853.png)

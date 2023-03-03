@@ -59,7 +59,10 @@ gp env HONEYCOMB_API_KEY=""
 ![honey ENV](https://user-images.githubusercontent.com/46639580/222626817-30b8d8c1-c8e1-49ee-b718-1e0482d91da7.png)
 
 After the above steps Data was finally able to get to Honeycomb and we were able to query the data and visualize it
+
 ![image](https://user-images.githubusercontent.com/46639580/222335529-a7936216-b90f-43a9-a576-858e2d216803.png)
+
+![image](https://user-images.githubusercontent.com/46639580/222627474-ad0dd1e7-0f0e-406d-b86c-34f51b733133.png)
 
 ## Instrument AWS X-Ray
 

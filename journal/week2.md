@@ -27,7 +27,7 @@ Then we installed it using these dependencies:
 pip install -r requirements.txt
 ```
 
-Then added Add to the `app.py`
+Then added Add to the following below to our `app.py`
 
 ```py
 from opentelemetry import trace
@@ -37,6 +37,13 @@ from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExport
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
 ```
+
+ Grabbed the API key from your honeycomb account and assigned enviroment variable:
+
+```sh
+export HONEYCOMB_API_KEY=""
+gp env HONEYCOMB_API_KEY=""
+![honey ENV](https://user-images.githubusercontent.com/46639580/222626817-30b8d8c1-c8e1-49ee-b718-1e0482d91da7.png)
 
 ![image](https://user-images.githubusercontent.com/46639580/222335529-a7936216-b90f-43a9-a576-858e2d216803.png)
 

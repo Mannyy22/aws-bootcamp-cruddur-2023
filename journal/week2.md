@@ -27,7 +27,7 @@ Then we installed it using these dependencies:
 pip install -r requirements.txt
 ```
 
-Then added Add to the following below to our `app.py`
+Then added Add to the following below to our `app.py` This setup tracing so we could send Data to honey comb
 
 ```py
 from opentelemetry import trace
@@ -38,6 +38,18 @@ from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
 ```
 
+
+```py
+# Initialize tracing and an exporter that can send data to Honeycomb
+provider = TracerProvider()
+processor = BatchSpanProcessor(OTLPSpanExporter())
+provider.add_span_processor(processor)
+trace.set_tracer_provider(provider)
+tracer = trace.get_tracer(__name__)
+```
+
+![image](https://user-images.githubusercontent.com/46639580/222627239-86c8a9be-9a0d-488f-a074-3a61a95043cf.png)
+
  Grabbed the API key from your honeycomb account and assigned enviroment variable:
 
 ```sh
@@ -46,6 +58,7 @@ gp env HONEYCOMB_API_KEY=""
 ```
 ![honey ENV](https://user-images.githubusercontent.com/46639580/222626817-30b8d8c1-c8e1-49ee-b718-1e0482d91da7.png)
 
+After the above steps Data was finally able to get to Honeycomb and we were able to query the data and visualize it
 ![image](https://user-images.githubusercontent.com/46639580/222335529-a7936216-b90f-43a9-a576-858e2d216803.png)
 
 ## Instrument AWS X-Ray

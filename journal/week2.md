@@ -123,6 +123,6 @@ LOGGER.info('test log')
 After we saw Crudder Log group and it the logs had our message "test log"
 ![image](https://user-images.githubusercontent.com/46639580/222639558-b15640ba-1214-4417-9d6c-a4323f95f84f.png)
 
-![image](https://user-images.githubusercontent.com/46639580/222639558-b15640ba-1214-4417-9d6c-a4323f95f84f.png)
+![image](https://user-images.githubusercontent.com/46639580/222639839-a1f487a1-504d-41ea-b5b7-d7f8516a5237.png)
 
 ## Integrate Rollbar and capture and error

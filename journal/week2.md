@@ -8,6 +8,9 @@
 - [x] Integrate Rollbar and capture and error
 
 ## Instrument Honeycomb with OTEL
+This week we learned about Distributed Tracing. Distributed Tracing is basically how we track/manage all the request that go through our Software Systems
+
+
 Setup OTEL_SERVICE_NAME in my docker-compose file:
 ![image](https://user-images.githubusercontent.com/46639580/222627605-5147bcbc-c4b4-409c-b91c-51c1535668a4.png)
 

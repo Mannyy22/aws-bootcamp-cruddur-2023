@@ -75,6 +75,10 @@ Created xray
 Created a new sampling Rule:
 ![image](https://user-images.githubusercontent.com/46639580/222650435-96263e5a-e4d9-44d2-9fe8-75ce7887c9c6.png)
 
+Traces are in AWS and can be viewed and queried
+
+![image](https://user-images.githubusercontent.com/46639580/222659397-cfee8377-67b4-4760-bbbf-1bdf86545acf.png)
+
 ## Configure custom logger to send to CloudWatch Logs
 
 First I added `watchtower` to `requirements.txt`

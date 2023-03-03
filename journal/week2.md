@@ -75,9 +75,11 @@ Created xray
 Created a new sampling Rule:
 ![image](https://user-images.githubusercontent.com/46639580/222650435-96263e5a-e4d9-44d2-9fe8-75ce7887c9c6.png)
 
-Traces are in AWS and can be viewed and queried
+Traces are in X-Ray and can be viewed and queried
 
 ![image](https://user-images.githubusercontent.com/46639580/222659397-cfee8377-67b4-4760-bbbf-1bdf86545acf.png)
+
+![trace](https://user-images.githubusercontent.com/46639580/222659851-ff2011ef-0c7f-4cca-8ffb-787367850c8a.png)
 
 ## Configure custom logger to send to CloudWatch Logs
 

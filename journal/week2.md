@@ -137,3 +137,9 @@ After we saw Crudder Log group and it the logs had our message "test log"
 ![image](https://user-images.githubusercontent.com/46639580/222639839-a1f487a1-504d-41ea-b5b7-d7f8516a5237.png)
 
 ## Integrate Rollbar and capture and error
+We added below: To our `requirements.txt`
+
+```
+blinker
+rollbar
+```

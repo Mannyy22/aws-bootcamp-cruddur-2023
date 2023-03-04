@@ -143,3 +143,46 @@ We added below: To our `requirements.txt`
 blinker
 rollbar
 ```
+We created env variable for our Rollbar access token
+
+![rolllbar access token](https://user-images.githubusercontent.com/46639580/222875888-7505e894-4c27-40dd-b7c1-e1271d2bf4c7.png)
+
+
+Added the following below to our ``` app.py ``` file
+
+```py
+import rollbar
+import rollbar.contrib.flask
+from flask import got_request_exception
+```
+
+```py
+rollbar_access_token = os.getenv('ROLLBAR_ACCESS_TOKEN')
+@app.before_first_request
+def init_rollbar():
+    """init rollbar module"""
+    rollbar.init(
+        # access token
+        rollbar_access_token,
+        # environment name
+        'production',
+        # server root directory, makes tracebacks prettier
+        root=os.path.dirname(os.path.realpath(__file__)),
+        # flask already sets up logging
+        allow_logging_basic_config=False)
+
+    # send exceptions from `app` to rollbar, using flask's signal system.
+    got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
+```
+
+We'll add an endpoint just for testing rollbar to `app.py`
+
+```py
+@app.route('/rollbar/test')
+def rollbar_test():
+    rollbar.report_message('Hello World!', 'warning')
+    return "Hello World!"
+```
+Was able to sucessfully send data to rollbar
+
+![image](https://user-images.githubusercontent.com/46639580/222875935-9f550d12-7d68-46ed-b987-7f445dfd9383.png)

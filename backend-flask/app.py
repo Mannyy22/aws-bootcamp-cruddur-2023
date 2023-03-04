@@ -107,6 +107,7 @@ def init_rollbar():
         root=os.path.dirname(os.path.realpath(__file__)),
         # flask already sets up logging
         allow_logging_basic_config=False)
+    got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
 
 @app.route('/rollbar/test')
 def rollbar_test():

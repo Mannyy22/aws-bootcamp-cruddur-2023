@@ -186,3 +186,7 @@ def rollbar_test():
 Was able to sucessfully send data to rollbar
 
 ![image](https://user-images.githubusercontent.com/46639580/222875935-9f550d12-7d68-46ed-b987-7f445dfd9383.png)
+
+Sucessfully captured error
+
+![image](https://user-images.githubusercontent.com/46639580/222876438-3d2a98c0-b1d4-40ef-b7eb-8a6d967c7c49.png)

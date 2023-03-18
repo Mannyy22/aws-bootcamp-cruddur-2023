@@ -175,9 +175,11 @@ I add the following below to my `SignupPage.js` to intergrate my custom signup p
   ```
 ![image](https://user-images.githubusercontent.com/46639580/226086644-51b2477c-7ea4-4337-ae12-5a3c3a743a05.png)
 
+
 ![image](https://user-images.githubusercontent.com/46639580/226086726-090f4665-e25e-4cae-90b5-318797dcef41.png)
 
 Sucessfully reseted my password
+
 ![image](https://user-images.githubusercontent.com/46639580/226086906-41e2516f-08f4-4e4e-a701-a3dc4214699e.png)
 
 

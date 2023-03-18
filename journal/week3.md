@@ -151,7 +151,7 @@ I add the following below to my `SignupPage.js` to intergrate my custom signup p
   
   ## Implement Custom Recovery Page
  I add the following to `my RecoveryPage.js`. So I could recover my password in case I forgot it.
- 
+ ```js
    const onsubmit_send_code = async (event) => {
     event.preventDefault();
     setErrors('')
@@ -172,6 +172,7 @@ I add the following below to my `SignupPage.js` to intergrate my custom signup p
     }
     return false
   }
+  ```
 ![image](https://user-images.githubusercontent.com/46639580/226086644-51b2477c-7ea4-4337-ae12-5a3c3a743a05.png)
 
 ![image](https://user-images.githubusercontent.com/46639580/226086726-090f4665-e25e-4cae-90b5-318797dcef41.png)

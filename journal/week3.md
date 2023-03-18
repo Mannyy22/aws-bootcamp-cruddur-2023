@@ -4,6 +4,7 @@
 - [x] Watch weekly videos
 - [x] Setup Cognito User Pool
 - [x] Implement Custom Signin Page
+- [x] Implement Custom Signup Page
 - [x] Implement Custom Confirmation Page
 - [x] Implement Custom Recovery Page
 - [x] Verify JWT token server side
@@ -71,3 +72,32 @@ export default function HomeFeedPage() {
 ```
 ![image](https://user-images.githubusercontent.com/46639580/226080660-5b5f6892-8ea7-48fa-82d9-3efd46dcda36.png)
 
+## Implement Custom Signup Page
+I add the following below to my `SignupPage.js`  to intergrate my custom signup page
+
+    ```
+    const onsubmit = async (event) => {
+    event.preventDefault();
+    setErrors('')
+    try {
+        const { user } = await Auth.signUp({
+          username: email,
+          password: password,
+          attributes: {
+            name: name,
+            email: email,
+            preferred_username: username,
+          },
+          autoSignIn: { // optional - enables auto sign in after user is confirmed
+              enabled: true,
+          }
+        });
+        console.log(user);
+        window.location.href = `/confirm?email=${email}`
+    } catch (error) {
+        console.log(error);
+        setErrors(error.message)
+    }
+    return false
+  }
+  ```

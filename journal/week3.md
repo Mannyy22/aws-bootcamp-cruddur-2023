@@ -105,6 +105,43 @@ I add the following below to my `SignupPage.js` to intergrate my custom signup p
   
   ![image](https://user-images.githubusercontent.com/46639580/226086300-a65f6cc3-f4b1-4190-befa-1aed213060b5.png)
   
-  Confirmation that it is in Cognito with account also verfied
+  I was able to log into new account with Name and Handler to I inputted while signing up
+  ![image](https://user-images.githubusercontent.com/46639580/226086453-8b064684-7f57-41e0-ac58-4f198b7f425f.png)
+
+  
+  We also added confirmation by adding the following code below. This would allow us to confirm 
+  ```js
+   const resend_code = async (event) => {
+    setErrors('')
+    try {
+      await Auth.resendSignUp(email);
+      console.log('code resent successfully');
+      setCodeSent(true)
+    } catch (err) {
+      // does not return a code
+      // does cognito always return english
+      // for this to be an okay match?
+      console.log(err)
+      if (err.message == 'Username cannot be empty'){
+        setErrors("You need to provide an email in order to send Resend Activiation Code")   
+      } else if (err.message == "Username/client id combination not found."){
+        setErrors("Email is invalid or cannot be found.")   
+      }
+    }
+  }
+
+  const onsubmit = async (event) => {
+    event.preventDefault();
+    setErrors('')
+    try {
+      await Auth.confirmSignUp(email, code);
+      window.location.href = "/"
+    } catch (error) {
+      setErrors(error.message)
+    }
+    return false
+  }
+  ```
+  Confirmation that account is in Cognito with account also verfied
   ![image](https://user-images.githubusercontent.com/46639580/226086347-803d9161-f586-4450-a901-3be05054e233.png)
 

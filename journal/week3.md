@@ -75,7 +75,7 @@ export default function HomeFeedPage() {
 ## Implement Custom Signup Page
 I add the following below to my `SignupPage.js`  to intergrate my custom signup page
 
-    ```
+  ```js
     const onsubmit = async (event) => {
     event.preventDefault();
     setErrors('')
@@ -100,5 +100,4 @@ I add the following below to my `SignupPage.js`  to intergrate my custom signup 
     }
     return false
   }
-  
   ```

@@ -144,4 +144,7 @@ I add the following below to my `SignupPage.js` to intergrate my custom signup p
   ```
   Confirmation that account is in Cognito with account also verfied
   ![image](https://user-images.githubusercontent.com/46639580/226086347-803d9161-f586-4450-a901-3be05054e233.png)
+  
+  Got email-verfication to verify my account:
+  ![image](https://user-images.githubusercontent.com/46639580/226086471-c58168e4-6909-42e1-b880-7b715e18ef1c.png)
 

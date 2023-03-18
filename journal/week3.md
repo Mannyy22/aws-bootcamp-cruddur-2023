@@ -73,7 +73,7 @@ export default function HomeFeedPage() {
 ![image](https://user-images.githubusercontent.com/46639580/226080660-5b5f6892-8ea7-48fa-82d9-3efd46dcda36.png)
 
 ## Implement Custom Signup Page
-I add the following below to my `SignupPage.js`  to intergrate my custom signup page
+I add the following below to my `SignupPage.js` to intergrate my custom signup page
 
   ```js
     const onsubmit = async (event) => {
@@ -101,3 +101,10 @@ I add the following below to my `SignupPage.js`  to intergrate my custom signup 
     return false
   }
   ```
+  Signing up through Cruddar
+  
+  ![image](https://user-images.githubusercontent.com/46639580/226086300-a65f6cc3-f4b1-4190-befa-1aed213060b5.png)
+  
+  Confirmation that it is in Cognito with account also verfied
+  ![image](https://user-images.githubusercontent.com/46639580/226086347-803d9161-f586-4450-a901-3be05054e233.png)
+

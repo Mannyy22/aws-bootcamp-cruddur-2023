@@ -108,8 +108,8 @@ I add the following below to my `SignupPage.js` to intergrate my custom signup p
   I was able to log into new account with Name and Handler to I inputted while signing up
   ![image](https://user-images.githubusercontent.com/46639580/226086453-8b064684-7f57-41e0-ac58-4f198b7f425f.png)
 
-  
-  We also added confirmation by adding the following code below. This would allow us to confirm 
+  ## Implement Custom Confirmation Page
+  We also added confirmation by adding the following code below to `ConfirmationPage.js`. This would allow us to confirm 
   ```js
    const resend_code = async (event) => {
     setErrors('')
@@ -142,9 +142,41 @@ I add the following below to my `SignupPage.js` to intergrate my custom signup p
     return false
   }
   ```
+  
   Confirmation that account is in Cognito with account also verfied
   ![image](https://user-images.githubusercontent.com/46639580/226086347-803d9161-f586-4450-a901-3be05054e233.png)
   
   Got email-verfication to verify my account:
   ![image](https://user-images.githubusercontent.com/46639580/226086471-c58168e4-6909-42e1-b880-7b715e18ef1c.png)
+  
+  ## Implement Custom Recovery Page
+ I add the following to `my RecoveryPage.js`. So I could recover my password in case I forgot it.
+ 
+   const onsubmit_send_code = async (event) => {
+    event.preventDefault();
+    setErrors('')
+    Auth.forgotPassword(username)
+    .then((data) => setFormState('confirm_code') )
+    .catch((err) => setErrors(err.message) );
+    return false
+  }
+  const onsubmit_confirm_code = async (event) => {
+    event.preventDefault();
+    setErrors('')
+    if (password == passwordAgain){
+      Auth.forgotPasswordSubmit(username, code, password)
+      .then((data) => setFormState('success'))
+      .catch((err) => setErrors(err.message) );
+    } else {
+      setErrors('Passwords do not match')
+    }
+    return false
+  }
+![image](https://user-images.githubusercontent.com/46639580/226086644-51b2477c-7ea4-4337-ae12-5a3c3a743a05.png)
+
+![image](https://user-images.githubusercontent.com/46639580/226086726-090f4665-e25e-4cae-90b5-318797dcef41.png)
+
+Sucessfully reseted my password
+![image](https://user-images.githubusercontent.com/46639580/226086906-41e2516f-08f4-4e4e-a701-a3dc4214699e.png)
+
 

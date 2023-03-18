@@ -41,7 +41,7 @@ After adding the following to be able to Conditionally show components based on 
 
 Added the following below to your `HomeFeedPage.js`
 
-```
+```js
 // [TODO] Authenication
 import Cookies from 'js-cookie'
 

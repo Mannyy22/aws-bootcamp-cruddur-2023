@@ -182,4 +182,14 @@ Sucessfully reseted my password
 
 ![image](https://user-images.githubusercontent.com/46639580/226086906-41e2516f-08f4-4e4e-a701-a3dc4214699e.png)
 
+## Verify JWT token server side
+Unauthenticated
+![image](https://user-images.githubusercontent.com/46639580/226203350-90c59f66-6bf2-468c-87c6-e5bb79f6f019.png)
+
+
+Authenticated
+![image](https://user-images.githubusercontent.com/46639580/226203103-6f00cb81-f9a9-4991-91b3-b4ea511b2312.png)
+
+
+![image](https://user-images.githubusercontent.com/46639580/226203278-2ae2ae0b-3f35-4efb-a424-7c9f66280f9b.png)
 

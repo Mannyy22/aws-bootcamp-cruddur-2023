@@ -39,3 +39,18 @@ Output:
 
 ![image](https://user-images.githubusercontent.com/46639580/227401631-0fc40aa1-e8b5-414e-8d04-4e071cdf6129.png)
 
+##  Create Schema for Postgres
+
+I created a new folder SQL file in my backend directory called `db` and I created a file inside the folder called `schema.sql`
+
+Added the following to the `schema.sql` file:
+
+`CREATE EXTENSION IF NOT EXISTS "uuid-ossp";`
+
+Then ran the following command below to add the UUID extention to your cruddur database:
+```
+psql cruddur < db/schema.sql -h localhost -U postgres
+```
+
+
+

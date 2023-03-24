@@ -75,7 +75,7 @@ Now these files are executable(Before they were not):
 
 I added the following to my files
 
-db-create
+`db-create`
 ```
 #! /usr/bin/bash
 
@@ -83,4 +83,14 @@ echo "db-drop"
 
 NO_DB_CONNECTION_URL=$(sed 's/\/cruddur//g' <<<"$CONNECTION_URL")
 psql $NO_DB_CONNECTION_URL -c "CREATE DATABASE cruddur;"
+```
+
+`db-drop`
+```
+#! /usr/bin/bash
+
+echo "db-drop"
+
+NO_DB_CONNECTION_URL=$(sed 's/\/cruddur//g' <<<"$CONNECTION_URL")
+psql $NO_DB_CONNECTION_URL -c "DROP DATABASE cruddur;"
 ```

@@ -94,3 +94,4 @@ echo "db-drop"
 NO_DB_CONNECTION_URL=$(sed 's/\/cruddur//g' <<<"$CONNECTION_URL")
 psql $NO_DB_CONNECTION_URL -c "DROP DATABASE cruddur;"
 ```
+![image](https://user-images.githubusercontent.com/46639580/227412630-24a64f4b-2752-46fb-9edb-8264b045e84c.png)

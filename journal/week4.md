@@ -34,3 +34,7 @@ aws rds create-db-instance \
   --performance-insights-retention-period 7 \
   --no-deletion-protection
   ```
+
+Output:
+![image](https://user-images.githubusercontent.com/46639580/227401631-0fc40aa1-e8b5-414e-8d04-4e071cdf6129.png)
+

@@ -155,8 +155,9 @@ This file allows us to inset data into our table after it has been created
 
 ![image](https://user-images.githubusercontent.com/46639580/227420318-5e3c570f-665c-41e8-ae88-37f741ec84c9.png)
 
+## SQL Files
 
-In addition we created two `.sql` file:
+In addition we directory called `db` and created two `.sql` file in it:
 `scheme.sql`
 `seed.sql`
 

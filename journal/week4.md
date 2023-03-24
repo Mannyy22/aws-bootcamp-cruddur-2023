@@ -53,4 +53,24 @@ psql cruddur < db/schema.sql -h localhost -U postgres
 ```
 
 
+## Bash scripting for common database actions
+
+I created new folder in backend directory(backend-flask/bin) called `bin` bin stands for Binaries this is where you can find executable files.
+
+I created three files for this directory:
+
+`db-create`
+`db-drob`
+`db-schema-load`
+
+These are the files we will write our bash script in. It is important to note when you create new files in Linux they will not be executable, so you must change the permissios. You can do that by using the `chmod` command:
+
+Example: `chmod u+x bin/db-create`
+        `chmod u+x bin/db-drop`
+        `chmod u+x bin/db-schema-load`
+        
+Now these files are executable(Before they were not):
+
+![image](https://user-images.githubusercontent.com/46639580/227411486-70d0a461-c3d6-4a65-91db-6123913b0474.png) 
+
 

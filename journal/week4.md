@@ -73,4 +73,14 @@ Now these files are executable(Before they were not):
 
 ![image](https://user-images.githubusercontent.com/46639580/227411486-70d0a461-c3d6-4a65-91db-6123913b0474.png) 
 
+I added the following to my files
 
+db-create
+```
+#! /usr/bin/bash
+
+echo "db-drop"
+
+NO_DB_CONNECTION_URL=$(sed 's/\/cruddur//g' <<<"$CONNECTION_URL")
+psql $NO_DB_CONNECTION_URL -c "CREATE DATABASE cruddur;"
+```

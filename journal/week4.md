@@ -95,6 +95,10 @@ NO_DB_CONNECTION_URL=$(sed 's/\/cruddur//g' <<<"$CONNECTION_URL")
 psql $NO_DB_CONNECTION_URL -c "DROP DATABASE cruddur;"
 ```
 
+![image](https://user-images.githubusercontent.com/46639580/227412630-24a64f4b-2752-46fb-9edb-8264b045e84c.png)
+![image](https://user-images.githubusercontent.com/46639580/227414538-6801b2be-fd70-4127-ba79-0623574f525d.png)
+
+
 `db-schema-load`
 
 ```
@@ -113,6 +117,6 @@ else
 fi
 ```
 
-![image](https://user-images.githubusercontent.com/46639580/227412630-24a64f4b-2752-46fb-9edb-8264b045e84c.png)
-![image](https://user-images.githubusercontent.com/46639580/227414538-6801b2be-fd70-4127-ba79-0623574f525d.png)
+For `db-schema-load`we added an if-statement that allows us to enter a parameter when we run the command, so we can choose to connect to your local database or production database.
 
+![image](https://user-images.githubusercontent.com/46639580/227416282-2528ee60-40bf-47cf-8a3a-0715a0e59cd6.png)

@@ -81,7 +81,10 @@ I added the following to my files
 ```
 #! /usr/bin/bash
 
-echo "db-drop"
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="db-create"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
 
 NO_DB_CONNECTION_URL=$(sed 's/\/cruddur//g' <<<"$CONNECTION_URL")
 psql $NO_DB_CONNECTION_URL -c "CREATE DATABASE cruddur;"
@@ -91,7 +94,10 @@ psql $NO_DB_CONNECTION_URL -c "CREATE DATABASE cruddur;"
 ```
 #! /usr/bin/bash
 
-echo "db-drop"
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="db-drop"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
 
 NO_DB_CONNECTION_URL=$(sed 's/\/cruddur//g' <<<"$CONNECTION_URL")
 psql $NO_DB_CONNECTION_URL -c "DROP DATABASE cruddur;"
@@ -106,17 +112,25 @@ psql $NO_DB_CONNECTION_URL -c "DROP DATABASE cruddur;"
 ```
 #! /usr/bin/bash
 
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="db-schema-load"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
+
 echo "db-schema-load"
 
 schema_path="$(realpath .)/db/schema.sql"
 echo $schema_path
 
 if [ "$1" = "prod" ]; then
-    echo "using production"
+    echo "Running in production mode"
     URL=$PROD_CONNECTION_URL
 else
     URL=$CONNECTION_URL
 fi
+
+psql $URL cruddur < $schema_path
+
 ```
 
 For `db-schema-load`we added an if-statement that allows us to enter a parameter when we run the command, so we can choose to connect to your local database or production database.

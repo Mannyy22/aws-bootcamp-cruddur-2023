@@ -63,7 +63,7 @@ I created bash scripting files for this directory, so we could execute task easi
 `db-drob`
 `db-schema-load`
 `db-seed`
-'db-connect'
+'db-connect`
 
 These are the files we will write our bash script in. It is important to note when you create new files in Linux they will not be executable, so you must change the permissios. You can do that by using the `chmod` command:
 
@@ -122,3 +122,89 @@ fi
 For `db-schema-load`we added an if-statement that allows us to enter a parameter when we run the command, so we can choose to connect to your local database or production database.
 
 ![image](https://user-images.githubusercontent.com/46639580/227416282-2528ee60-40bf-47cf-8a3a-0715a0e59cd6.png)
+
+
+'db-connect`
+
+```
+#! /usr/bin/bash
+
+psql $CONNECTION_URL
+```
+
+This file allow us to connect to our database prod or local depending on the parameter we give it
+
+`db-seed`
+
+```
+#! /usr/bin/bash
+
+
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="db-seed"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
+
+seed_path="$(realpath .)/db/seed.sql"
+
+echo $seed_path
+
+psql $CONNECTION_URL cruddur < $seed_path
+```
+This file allows us to inset data into our table after it has been created
+
+![image](https://user-images.githubusercontent.com/46639580/227420318-5e3c570f-665c-41e8-ae88-37f741ec84c9.png)
+
+
+In addition we created two `.sql` file:
+`scheme.sql`
+`seed.sql`
+
+`scheme.sql`
+This file creates a schema for our data base, schema like an excel file, it setsup how our Database will be formatted.
+
+```
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+DROP TABLE IF EXISTS public.users;
+
+DROP TABLE IF EXISTS public.activities;
+
+CREATE TABLE public.users (
+  uuid UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  display_name text,
+  handle text,
+  cognito_user_id text,
+  created_at TIMESTAMP default current_timestamp NOT NULL
+);
+
+CREATE TABLE public.activities (
+  uuid UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  user_uuid UUID NOT NULL,
+  message text NOT NULL,
+  replies_count integer DEFAULT 0,
+  reposts_count integer DEFAULT 0,
+  likes_count integer DEFAULT 0,
+  reply_to_activity_uuid integer,
+  expires_at TIMESTAMP,
+  created_at TIMESTAMP default current_timestamp NOT NULL
+);
+```
+
+`seed.sql`
+
+This file has data we can use to insert into our database.
+
+```INSERT INTO public.users (display_name, handle, cognito_user_id)
+VALUES
+  ('Andrew Brown', 'andrewbrown' ,'MOCK'),
+  ('Andrew Bayko', 'bayko' ,'MOCK');
+
+INSERT INTO public.activities (user_uuid, message, expires_at)
+VALUES
+  (
+    (SELECT uuid from public.users WHERE users.handle = 'andrewbrown' LIMIT 1),
+    'This was imported as seed data!',
+    current_timestamp + interval '10 day'
+  )
+```
